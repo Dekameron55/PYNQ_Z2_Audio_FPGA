@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.450958",
+   "Default View_TopLeft":"-475,-126",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1680 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1680 -y 10 -defaultsOSRD
+preplace port EN -pg 1 -lvl 5 -x 1680 -y 380 -defaultsOSRD
+preplace port IIC_0_0 -pg 1 -lvl 5 -x 1680 -y 70 -defaultsOSRD
+preplace port port-id_RX -pg 1 -lvl 0 -x -50 -y 240 -defaultsOSRD
+preplace port port-id_TX -pg 1 -lvl 0 -x -50 -y 290 -defaultsOSRD -left
+preplace port port-id_BCK_ESP32 -pg 1 -lvl 0 -x -50 -y 480 -defaultsOSRD
+preplace port port-id_LRCK_ESP32 -pg 1 -lvl 0 -x -50 -y 520 -defaultsOSRD
+preplace port port-id_DATA_ESP32 -pg 1 -lvl 0 -x -50 -y 560 -defaultsOSRD
+preplace port port-id_BCK_ADAU -pg 1 -lvl 5 -x 1680 -y 630 -defaultsOSRD
+preplace port port-id_LRCK_ADAU -pg 1 -lvl 5 -x 1680 -y 710 -defaultsOSRD
+preplace port port-id_DATA_ADAU -pg 1 -lvl 5 -x 1680 -y 670 -defaultsOSRD
+preplace port port-id_CLK_O_ADAU -pg 1 -lvl 5 -x 1680 -y 740 -defaultsOSRD
+preplace port port-id_LED2_PLL_LK -pg 1 -lvl 5 -x 1680 -y 460 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 210 -y 100 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1500 -y 190 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1060 -y -30 -defaultsOSRD
+preplace inst uart_custom_axi_v7_v_0 -pg 1 -lvl 2 -x 720 -y 210 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1060 -y 320 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 720 -y 450 -defaultsOSRD
+preplace inst i2s_loopback_0 -pg 1 -lvl 3 -x 1060 -y 640 -defaultsOSRD
+preplace netloc RX_1 1 0 2 NJ 240 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 590 -50 N
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 620 310 880 240 1350
+preplace netloc uart_custom_axi_v7_v_0_TX 1 0 3 NJ 290 400J 300 820
+preplace netloc clk_wiz_0_clk_out1 1 2 1 860 440n
+preplace netloc BCK_ESP32_1 1 0 3 NJ 480 620J 380 840
+preplace netloc LRCK_ESP32_1 1 0 3 NJ 520 NJ 520 830
+preplace netloc DATA_ESP32_1 1 0 3 NJ 560 NJ 560 820
+preplace netloc i2s_loopback_0_BCK_ADAU 1 3 2 NJ 610 1650
+preplace netloc i2s_loopback_0_LRCK_ADAU 1 3 2 N 630 1640J
+preplace netloc i2s_loopback_0_DATA_ADAU 1 3 2 1260 670 NJ
+preplace netloc i2s_loopback_0_clk_adau 1 3 2 1230 740 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 220 600 120 870 130 1360
+preplace netloc clk_wiz_0_locked 1 2 3 N 460 NJ 460 NJ
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 40 890 70 1240J 40 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 60 820 80 1230J 30 1650
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 400J 110 N 110 N
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 4 610 370 850J 400 NJ 400 1650
+preplace netloc axi_gpio_0_GPIO 1 3 2 1230J 380 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 3 890 410 NJ 410 1640
+preplace netloc processing_system7_0_IIC_0 1 1 4 600J 90 NJ 90 1360J 50 1650J
+levelinfo -pg 1 -50 210 720 1060 1500 1680
+pagesize -pg 1 -db -bbox -sgen -180 -290 2710 1330
+"
+}
+{
+   "da_axi4_cnt":"12",
+   "da_board_cnt":"4",
+   "da_clkrst_cnt":"11",
+   "da_ps7_cnt":"1"
+}
