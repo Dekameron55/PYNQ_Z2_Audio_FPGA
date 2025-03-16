@@ -9,6 +9,9 @@ The ESP32 is initialized via a custom UART module written in Verilog, and the Bl
 
 Additionally, the ESP-AT firmware has been specifically recompiled to support A2DP (Advanced Audio Distribution Profile) and I2S communication over UART. The AT UART module is configured not to use hardware flow control, ensuring smooth operation over the UART interface.
 
+![Screenshot](https://github.com/Dekameron55/PYNQ_Z2_Audio_FPGA/blob/main/images/Setup.jpg)
+
+
 ## Hardware Requirements
 
 - PYNQ Z2 Board
@@ -77,6 +80,11 @@ Users can consult with the original **PmodESP32 schematic** for the module for f
 Further information on the pin out from the Zynq side can be found in the `hardware` in `constraints.xdc` file which showcases the used pins and connections from the Zynq SOC side
 
 In the `hardware` folder the user can find information regarding the generated bitstream such as the i2s loopback module and the block design shown in the README file.
+
+The block diagram of the project is the following. This is the block based design in Vivado 2023.2:
+
+![Screenshot](https://github.com/Dekameron55/PYNQ_Z2_Audio_FPGA/blob/main/images/blockDiagram.png)
+
 
 ## Project Overview
 
