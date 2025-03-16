@@ -7,7 +7,7 @@ This project enables audio streaming to the PYNQ Z2 board via Bluetooth using th
 
 The ESP32 is initialized via a custom UART module written in Verilog, and the Bluetooth connection is managed using AT commands. The ADAU1761 codec is configured using the `periphery` library, which is already present in the PYNQ Linux image. This library allows direct access to I2C communication, enabling the necessary configuration of the audio codec before it starts receiving audio data from the ESP32.
 
-Additionally, the ESP-AT firmware has been specifically recompiled to support A2DP (Advanced Audio Distribution Profile) and I2S communication over UART. The AT UART module is configured not to use hardware flow control, ensuring smooth operation over the UART interface.
+Additionally, the ESP-AT firmware has been specifically recompiled to support A2DP (Advanced Audio Distribution Profile) and I2S audio stream. The AT UART module is configured not to use hardware flow control, ensuring smooth operation over the UART interface.
 
 ![Screenshot](https://github.com/Dekameron55/PYNQ_Z2_Audio_FPGA/blob/main/images/Setup.jpg)
 
@@ -29,7 +29,7 @@ Additionally, the ESP-AT firmware has been specifically recompiled to support A2
 
 ## ESP32 Firmware Configuration
 
-The ESP32 firmware is recompiled with the following key settings to support A2DP and I2S communication over UART. These settings are configured within the **`sdkconfig`** file, which is used during the pre-build stage of the ESP32 firmware.
+The ESP32 firmware is recompiled with the following key settings to support A2DP and I2S audio stream. These settings are configured within the **`sdkconfig`** file, which is used during the pre-build stage of the ESP32 firmware.
 
 ### Key Settings in `sdkconfig`:
 
