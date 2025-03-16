@@ -7,7 +7,7 @@ This project enables audio streaming to the PYNQ Z2 board via Bluetooth using th
 
 The ESP32 is initialized via a custom UART module written in Verilog, and the Bluetooth connection is managed using AT commands. The ADAU1761 codec is configured using the `periphery` library, which is already present in the PYNQ Linux image. This library allows direct access to I2C communication, enabling the necessary configuration of the audio codec before it starts receiving audio data from the ESP32.
 
-Additionally, the ESP-AT firmware has been specifically recompiled to support A2DP (Advanced Audio Distribution Profile) and I2S audio stream. The AT UART module is configured not to use hardware flow control, ensuring smooth operation over the UART interface.
+Additionally, the ESP-AT firmware has been specifically recompiled to support A2DP (Advanced Audio Distribution Profile) and I2S audio stream. The AT UART module is configured not to use hardware flow control, in order to free up pins for the I2S interface while using the UART configuration of the relays on the PmodESP32 board.
 
 ![Screenshot](https://github.com/Dekameron55/PYNQ_Z2_Audio_FPGA/blob/main/images/Setup.jpg)
 
@@ -62,7 +62,7 @@ Below is the pinout for the ESP32, reflecting the specific connections for I2S a
 
 | **Pin** | **Signal**                | **Description**                                                        |
 |---------|---------------------------|------------------------------------------------------------------------|
-| 1       | I2S_BCK / SS              | I2S_BCK_PIN / SPI Slave Select (not used in this example)               |
+| 1       | RTS / SS                  | UART RTS Pin (not used) / SPI Slave Select (not used in this example)               |
 | 2       | RXD / MOSI                | UART Receive Data / SPI Master Out Slave In (not used in this example) |
 | 3       | TXD / MISO                | UART Transmit Data / SPI Master In Slave Out (not used in this example)|
 | 4       | I2S_BCK / SCK             | I2S_BCK Pin / SPI Serial Clock (not used in this example)              |
@@ -71,7 +71,7 @@ Below is the pinout for the ESP32, reflecting the specific connections for I2S a
 | 7       | I2S_DATA                  | I2S_DATA_PIN / IO2                                                     |
 | 8       | EN                        | Reset Enable                                                           |
 | 9       | SELECT                    | UART or SPI Mode Select                                                |
-| 10      | GPIO                      | Configurable GPIO / IO32                                               |
+| 10      | I2S_LRCK_PIN              | I2S_LRCK_PIN  / IO32                                               |
 | 11      | GND                       | Power Supply Ground                                                   |
 | 12      | VCC                       | Power Supply (3.3V)                                                    |
 
